@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>List | Pokemon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
-<body>
- <p>Which pokemon would you like to know more about?</p>
+<body class="h-100 bg-dark text-light d-flex flex-column justify-content-center align-items-center">
+<h1>Pokemon Encyclopedia</h1>
+<p class="lead">Which pokemon would you like to know more about?</p>
+<p>
  {% for pokemon in random_pokemon %}
-<a href="/{{pokemon['name']}}">{{ pokemon['name'] }}</a>
+<a href="/{{pokemon['name']}}" role="button" class="btn btn-outline-info mx-1 text-capitalize">{{ pokemon['name'] }}</a>
   {% endfor %}
+</p>
 </body>
 </html>
